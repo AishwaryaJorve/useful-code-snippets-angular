@@ -1,0 +1,29 @@
+
+.select-class{
+    /* background-color: royalblue; */
+    height: 50px;
+    width: 40%;
+    font-size: 20px;
+  
+    background-color: white !important;
+    border-bottom: 3px solid #24a0ed;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+}
+
+select:required:invalid {
+    color: gray;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: black;
+  }
+select option{
+    font-size: 20px;
+    border-top: none;
+    color: black;
+  }
