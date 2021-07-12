@@ -1,0 +1,126 @@
+<!-- 
+  <amexio-tab-view  [closable]="false">
+    <amexio-tab title="mahesh" [active]="true" style="pointer-events: none !important;">
+      <amexio-data-table-column [data-index]="'ELEM_SUBTYPE'" [width]="9" [data-type]="'string'" [hidden]="false"
+      [text]="'Component Sub-Type'">
+      <ng-template #amexioBodyTmpl let-column let-row="row">
+        <a> {{row.ELEM_SUBTYPE}}</a>
+         <span  class="tooltiptext">
+           <div style="background:white">{{row.SUBTYPE_NM}}</div>
+         </span>
+       </ng-template>
+    </amexio-data-table-column> 
+    </amexio-tab>
+    <amexio-tab title="Bansode" style="pointer-events: none !important;">
+       Work 
+      Nullam nec dolor lobortis, dictum dolor ac, suscipit massa. Donec id suscipit nisi.
+      Nunc sit amet aliquet risus. Aenean placerat suscipit risus at mollis. Quisque eleifend gravida scelerisque.
+      In non eleifend nisi. Phasellus tempor hendrerit posuere.
+      Praesent ornare rutrum mi et condimentum.
+    </amexio-tab>
+   
+  </amexio-tab-view>
+ -->
+
+ <amexio-tab-view [closable]="false">
+    <amexio-tab title="SUMMARY" [active]="true" style="pointer-events: none !important;">
+      <h1>Hello</h1>
+      <div>
+        <amexio-floating-panel
+          [show-panel]="showCaseEdu"
+          [width]="'1000'"
+          [height]="400"
+          [title]="'Case Adjudication History'"
+          [relative]="false"
+          [closeable]="true"
+          [top-position]="'350px'"
+          [left-position]="'700px'"
+        >
+          <amexio-row>
+            <amexio-datagrid [data]="testData">
+              <amexio-data-table-column
+                [data-index]="'name'"
+                [data-type]="'string'"
+                [hidden]="false"
+                [text]="'Name'"
+              >
+                <ng-template #amexioBodyTmpl let-column let-row="row">
+                  <!-- <span
+                    id="tooltip"
+                    data-title="{{ row.midname }}"
+                    style="
+                      pointer-events: auto !important;
+                      background-color: red !important;
+                    "
+                  >
+                    <div>
+                      {{ row.name }}
+                    </div>
+                  </span> -->
+  
+                  <!-- <span
+                  class="pseudo-tooltip-wrapper"
+                  data-title="{{ row.midname }}"
+                  >{{ row.name }}</span
+                > -->
+  
+                  <!-- <a style="pointer-events: auto !important" data-title="{{ row.midname }}">{{ row.name }}</a> -->
+  
+                  <!-- <a
+                  title=""
+                  style="pointer-events: auto !important"
+                  data-title="{{row.midname}}"
+                  >{{ row.name }}</a
+                >  -->
+                    
+                <div title="" class="tooltip">
+                  {{row.name}}
+                  <div class="top">
+                      {{row.midname}}
+                  </div>
+              </div>
+              
+  
+                  <!-- <a href="example.com" data-title="My site" style="pointer-events: visible !important"> Link </a> with styled
+                tooltip (bigger and with a different background color, as
+                requested in the question)<br /> -->
+  
+                  <!-- <span title="{{ row.midname }}"></span> -->
+  
+                  <!-- <a href="#" class="tip"
+                  >Link<span
+                    >This is the CSS tooltip showing up when you mouse over the
+                    link</span
+                  ></a
+                > -->
+  
+                  <!-- <a></a>
+                     <span  class="tooltiptext" title="{{ row.name }}">
+                       <div style="background:white">{{ row.midname }}</div>
+                     </span> -->
+  
+                  <!-- <span >
+            <div class="tooltip" role="tooltip">
+              <div class="tooltip-arrow" style="pointer-events: auto !important;">{{row.midname}}</div>
+              <div class="tooltip-inner"></div>
+          </div>
+          </span> -->
+                </ng-template>
+              </amexio-data-table-column>
+              <amexio-data-table-column
+                [data-index]="'sirname'"
+                [data-type]="'string'"
+                [hidden]="false"
+                [text]="'SirName'"
+              >
+              </amexio-data-table-column>
+            </amexio-datagrid>
+          </amexio-row>
+        </amexio-floating-panel>
+      </div>
+    </amexio-tab>
+    <amexio-tab title="Anything" style="pointer-events: none !important">
+      <h1 class="h1Tag">hello</h1>
+    </amexio-tab>
+  </amexio-tab-view>
+  
