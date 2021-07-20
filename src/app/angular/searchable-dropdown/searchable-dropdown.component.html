@@ -1,0 +1,79 @@
+<!-- ..............  [(ngModel)]="selectedValue".......searchable dropdown.......................... -->
+
+<div class="select-div">
+  <input
+    type="text"
+    list="document"
+    class="select-class"
+    [(ngModel)]="selectedValueName"
+    placeholder="Select"
+    (change)="myFunction($event.target.value)"
+  />
+
+  <datalist id="document" class="datalist scrollable" style="overflow-y: auto!important">
+    <option
+    class="option-class"
+      *ngFor="let data of response.data"
+      [value]="data.DISPLAY_NAME"
+    >
+      {{ data.DISPLAY_NAME }}
+    </option>
+  </datalist>
+</div>
+
+<div>
+  {{ selectedObject | json }}
+</div>
+
+
+
+
+
+<!-- ....................previous code..................... -->
+<!-- <div class="select-div">
+  <select
+    [(ngModel)]="selectedValue"
+    class="select-class"
+    (change)="myFunction($event.target.value)"
+  >
+    <option [value]="null" selected disabled>choose</option>
+    <option
+      id="document"
+      class="option-class"
+      *ngFor="let data of response.data"
+      [value]="data.DOCUMENT_TYPE_ID"
+    >
+      {{ data.DISPLAY_NAME }}
+    </option>
+ 
+  </select>
+</div>
+
+<div>
+  {{ selectedObject | json }}
+</div> -->
+
+
+
+
+
+
+
+<!-- <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <div class="dropdown">
+      <input onclick="openSearchDropdown()" id="search_input" />
+      <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="search_value" onkeyup="filterSearchDropdown()" class="search-area" />
+          <span data-value="Bangkok" onclick="selectFilteredValue()">Bangkok</span>
+          <span data-value="Hong_Kong" onclick="selectFilteredValue()">Hong_Kong</span>
+          <span data-value="Jakarta" onclick="selectFilteredValue()">Jakarta</span>
+          <span data-value="Delhi" onclick="selectFilteredValue()">Delhi</span>
+          <span data-value="Karachi" onclick="selectFilteredValue()">Karachi</span>
+          <span data-value="Sydney" onclick="selectFilteredValue()">Sydney</span>
+      </div>
+  </div>
+</body> -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { stringify } from '@angular/core/src/util';
 
 @Component({
   selector: 'app-drop-down',
@@ -13,6 +14,7 @@ export class DropDownComponent implements OnInit {
   selectedName = ["Aishwarya", "Shubhangi", "Mahesh"];
 
   ngOnInit() {
+    // localStorage.setItem("aishwarya", "HEllo");
   }
 
   myFunction(name) {

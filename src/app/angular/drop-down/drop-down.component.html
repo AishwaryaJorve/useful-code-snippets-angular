@@ -1,10 +1,10 @@
 
 
-<div class="select-div">
+
+  
+  <div class="select-div">
   <select class="select-class" (change)="myFunction($event.target.value)" required>
     <option value="" disabled selected>choose</option>
     <option class="option-class" *ngFor="let name of selectedName">{{name}}</option>
   </select>
   </div>
-  
-  
