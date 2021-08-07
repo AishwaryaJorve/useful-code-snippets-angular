@@ -1,41 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-clear-model',
-  templateUrl: './clear-model.component.html',
-  styleUrls: ['./clear-model.component.css']
+  selector: "app-clear-model",
+  templateUrl: "./clear-model.component.html",
+  styleUrls: ["./clear-model.component.css"],
 })
 export class ClearModelComponent implements OnInit {
-
   comboCallModel: ComboCallModel;
+  orderID = ''
 
-  constructor() { this.comboCallModel = new ComboCallModel(); }
+  constructor() {
+    this.comboCallModel = new ComboCallModel();
+  }
 
   ngOnInit() {
     this.comboCallModel = {
-      candidateName: 'sdfsf',
-      specimenId: 'dfsdf',
-      scheduledId: 'dfsdf',
-      orderId: 'sdfd',
-      srPlatForm: 'fdsf',
-      search: 'sdff',
-      workFlow: 'dsfsf',
-      srType: 'sdff',
-      subCategory: 'sdff',
-      primaryCategory: 'dsf',
-      processingNote: 'dsffffffff',
+      candidateName: "sdfsf",
+      specimenId: "dfsdf",
+      scheduledId: "dfsdf",
+      orderId: "sdfd",
+      srPlatForm: "fdsf",
+      search: "sdff",
+      workFlow: "dsfsf",
+      srType: "sdff",
+      subCategory: "sdff",
+      primaryCategory: "dsf",
+      processingNote: "dsffffffff",
       srDescription: ["aishi", "shubhi", "masya"],
       srSummary: ["aishi", "shubhi", "masya"],
-      empdrivId: 'asdas',
+      empdrivId: "asdas",
     };
-    console.log(this.comboCallModel);
+    this.orderID = "dskjfksjdfk"
+    console.log(this.comboCallModel, "   ", this.orderID);
   }
 
   resetModel() {
+    // let candidateName = this.comboCallModel.candidateName;
     this.comboCallModel = new ComboCallModel();
+    this.orderID = '';
+    // this.comboCallModel.candidateName = candidateName;
+    console.log("orderId", this.orderID);
+
     console.log(this.comboCallModel);
   }
-
 }
 
 export class ComboCallModel {
