@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-searchable-dropdown',
-  templateUrl: './searchable-dropdown.component.html',
-  styleUrls: ['./searchable-dropdown.component.css']
+	selector: "app-searchable-dropdown",
+	templateUrl: "./searchable-dropdown.component.html",
+	styleUrls: ["./searchable-dropdown.component.css"],
 })
 export class SearchableDropdownComponent implements OnInit {
-
   dropmodel: dropDownModel;
   constructor() {
     this.dropmodel = new dropDownModel();
@@ -80,34 +79,34 @@ export class SearchableDropdownComponent implements OnInit {
     ],
   };
 
-  ngOnInit() { }
+	ngOnInit() { }
 
   /**
    *
    * @param event
    */
   seletedname: string;
-  myFunction(event: any) {
-    console.log(event, ".......... name from event");
-    //get whole selected object for fetching DOCUMENT_TYPE_ID by its DISPLAY_NAME
-    this.selectedObject = this.response.data.find(
-      (element) => element.DISPLAY_NAME == event
-    );
+	myFunction(event: any) {
+		console.log(event, ".......... name from event");
+		//get whole selected object for fetching DOCUMENT_TYPE_ID by its DISPLAY_NAME
+		this.selectedObject = this.response.data.find(
+			(element) => element.DISPLAY_NAME == event
+		);
 
-    if (this.selectedObject || this.selectedObject !== undefined) {
-      //get DOCUMENT_TYPE_ID
-      this.selectedValueNumber = 0;
-      this.selectedValueNumber = this.selectedObject.DOCUMENT_TYPE_ID;
-      this.selectedValueName = this.selectedObject.DISPLAY_NAME;
-    } else {
-      this.selectedValueNumber = 0;
-      alert("Display Name Not found");
-      console.log("Data not found");
-    }
-    console.log(this.selectedValueName, "name");
-    console.log(this.selectedValueNumber, "id");
-    console.log(this.selectedObject, "   selected object");
-  }
+		if (this.selectedObject || this.selectedObject !== undefined) {
+			//get DOCUMENT_TYPE_ID
+			this.selectedValueNumber = 0;
+			this.selectedValueNumber = this.selectedObject.DOCUMENT_TYPE_ID;
+			this.selectedValueName = this.selectedObject.DISPLAY_NAME;
+		} else {
+			this.selectedValueNumber = 0;
+			alert("Display Name Not found");
+			console.log("Data not found");
+		}
+		console.log(this.selectedValueName, "name");
+		console.log(this.selectedValueNumber, "id");
+		console.log(this.selectedObject, "   selected object");
+	}
 }
 export class dropDownModel {
   "DOCUMENT_TYPE_ID": number = null;
