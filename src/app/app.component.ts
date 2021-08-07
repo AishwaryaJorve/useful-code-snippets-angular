@@ -6,13 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   title = 'amexio-demo';
 
 
+	constructor() {
+
+	}
 
 	ngOnInit() {
-
-		//check for navigation time API support
 		if (window.performance) {
 			console.info("window.performance work's fine on this browser");
 		}
@@ -22,5 +24,61 @@ export class AppComponent implements OnInit {
 			console.info("This page is not reloaded");
 		}
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
