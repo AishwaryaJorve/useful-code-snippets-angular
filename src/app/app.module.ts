@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ClearModelComponent } from './angular/clear-model/clear-model.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArrayAsynchCallComponent } from './angular/array-asynch-call/array-asynch-call.component';
+import { ArrayToStrComponent } from './angular/array-to-str/array-to-str.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ArrayAsynchCallComponent } from './angular/array-asynch-call/array-asyn
     DropDownComponent,
     SearchableDropdownComponent,
     ClearModelComponent,
-    ArrayAsynchCallComponent
+    ArrayAsynchCallComponent,
+    ArrayToStrComponent
   ],
   imports: [
     BrowserModule,
