@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'amexio-demo';
+	date: string = "08/01/2020 - 09/01/2020"
+	dateStringArray: string[];
 
 
 	constructor() {
@@ -23,6 +25,7 @@ export class AppComponent implements OnInit {
 		} else {
 			console.info("This page is not reloaded");
 		}
+
 	}
 }
 

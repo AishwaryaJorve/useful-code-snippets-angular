@@ -9,6 +9,7 @@ import { ClearModelComponent } from './angular/clear-model/clear-model.component
 import { HttpClientModule } from '@angular/common/http';
 import { ArrayAsynchCallComponent } from './angular/array-asynch-call/array-asynch-call.component';
 import { ArrayToStrComponent } from './angular/array-to-str/array-to-str.component';
+import { DiffStringDatesComponent } from './angular/diff-string-dates/diff-string-dates.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ArrayToStrComponent } from './angular/array-to-str/array-to-str.compone
     SearchableDropdownComponent,
     ClearModelComponent,
     ArrayAsynchCallComponent,
-    ArrayToStrComponent
+    ArrayToStrComponent,
+    DiffStringDatesComponent
   ],
   imports: [
     BrowserModule,
