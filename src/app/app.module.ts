@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArrayAsynchCallComponent } from './angular/array-asynch-call/array-asynch-call.component';
 import { ArrayToStrComponent } from './angular/array-to-str/array-to-str.component';
 import { DiffStringDatesComponent } from './angular/diff-string-dates/diff-string-dates.component';
+import { DatesDiffernceComponent } from './angular/dates-differnce/dates-differnce.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,15 @@ import { DiffStringDatesComponent } from './angular/diff-string-dates/diff-strin
     ClearModelComponent,
     ArrayAsynchCallComponent,
     ArrayToStrComponent,
-    DiffStringDatesComponent
+    DiffStringDatesComponent,
+    DatesDiffernceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
